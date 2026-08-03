@@ -1,0 +1,25 @@
+# Quartus files
+db/
+incremental_db/
+simulation/
+output_files/
+devkits/
+*.mti
+*.mpf
+*.bak
+*.ini
+*.qws
+*.sof
+*.pof
+*.jdi
+*.rpt
+*.summary
+
+# ModelSim
+modelsim/
+work/
+*.wlf
+transcript
+vsim.wlf
+*Zone.Identifier
+
