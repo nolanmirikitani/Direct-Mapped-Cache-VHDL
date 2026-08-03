@@ -78,7 +78,8 @@ Where the bottom 2 bytes correspond to the index and offset. So therefore, the t
 
 ## Block Architecture
 This is the high level architecture of the cache, with some minor details being left out, and not including the control bits from the cache controller. It does show the Ram instantiations, and the CPU address slicing. Additionally another part shown is the output buffer for Ram address generation. This can be explained better in the FSM section.
-<img width="822" height="810" alt="Cache_Arch" src="https://github.com/user-attachments/assets/b443583e-c94f-414d-b25a-e52e5ae6c462" />
+<img width="822" height="810" alt="Cache_Arch" src="https://github.com/user-attachments/assets/997160a2-a90a-4bdc-b529-bb1e4574a979" />
+
 
 ## Hit/Miss Sequence
 ### Cache Hit
@@ -114,7 +115,8 @@ The latency is 9 cycles for a read miss, and 10 cycles for a write miss (the ext
   The last quirk handled in this topology is how a cache hit on a write request gets handled. Since 128 bits are held in a cache line, and the CPU only provides 32 bits to be written back, this also needs to get handled with a read-modify-write function from the data RAM. This gets handled by having a MUX that allows 32 bits of the current stored data, to be overwritten by CPU data depending on the offset, and that gets written back into the data RAM.
 
 ## FSM Diagram
-<img width="909" height="1095" alt="Cache_FSM" src="https://github.com/user-attachments/assets/b96343af-5737-4015-8ff9-5b3c664d231c" />
+<img width="909" height="1095" alt="Cache_FSM" src="https://github.com/user-attachments/assets/1c5328b3-fc04-4b72-8c71-61532ad59522" />
+
 
 
 ## Verification
